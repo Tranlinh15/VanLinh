@@ -1,0 +1,106 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fffbeb;
+  color: #1f2937;
+}
+
+.font-anton {
+  font-family: "Anton", sans-serif;
+}
+.bg-brand-red {
+  background-color: #b91c1c;
+}
+.text-brand-red {
+  color: #b91c1c;
+}
+.text-brand-beige {
+  color: #fffbeb;
+}
+.border-brand-red {
+  border-color: #b91c1c;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fffbeb;
+}
+::-webkit-scrollbar-thumb {
+  background: #b91c1c;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #991b1b;
+}
+
+/* Skill cards */
+.skill-card {
+  background: white;
+  padding: 2rem;
+  border-top: 4px solid #b91c1c;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+.skill-card h3 {
+  color: #b91c1c;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* GenZ cards */
+.genz-card {
+  background-color: rgba(153, 27, 27, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.genz-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+/* Contact links */
+.contact-link {
+  font-size: 1.125rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-link:hover {
+  color: #b91c1c;
+}
+
+#hero {
+  background: url("img/cover.jpg") no-repeat center center/cover fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.context-nav-bar {
+  color: white;
+  font-size: 20px;
+}

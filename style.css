@@ -89,7 +89,7 @@ body {
 }
 
 #hero {
-  background: url("img/cover.JPG") no-repeat center center/cover fixed;
+  background: url("img/cover.JPG");
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -104,3 +104,4 @@ body {
   color: white;
   font-size: 20px;
 }
+

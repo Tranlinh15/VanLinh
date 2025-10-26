@@ -4,40 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trần Văn Lĩnh - Portfolio 2025</title>
-
-    <!-- ✅ Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- ✅ Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- ✅ CSS Local -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body class="overflow-x-hidden bg-[#fffbeb] text-[#1f2937] font-inter">
-    <!-- Header -->
+  <body class="overflow-x-hidden">
+    <!-- Header and Navigation -->
     <header
       id="header"
-      class="fixed top-0 left-0 right-0 z-50 bg-[#b91c1c] shadow-lg transition-all duration-300"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#hero" class="text-2xl font-anton text-white">
-          ĐANG HỌC LẬP TRÌNH WEB :>
-        </a>
-
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#hero" class="text-2xl font-anton text-white"
+          >ĐANG HỌC LẬP TRÌNH WED :></a
+        >
         <div class="hidden md:flex space-x-8">
           <a href="#about" class="context-nav-bar"><b>Giới thiệu</b></a>
           <a href="#education" class="context-nav-bar"><b>Học vấn</b></a>
-          <a href="#skills" class="context-nav-bar"><b>Kỹ năng</b></a>
+          <a href="#genz" class="context-nav-bar"><b>Trãi nghiệm</b></a>
           <a href="#contact" class="context-nav-bar"><b>Liên hệ</b></a>
         </div>
-
         <button
           id="mobile-menu-button"
           class="md:hidden text-white focus:outline-none"
@@ -58,36 +51,41 @@
           </svg>
         </button>
       </nav>
-
       <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-[#b91c1c] bg-opacity-95 text-center"
-      >
-        <a href="#about" class="block text-white py-2">Giới thiệu</a>
-        <a href="#education" class="block text-white py-2">Học vấn</a>
-        <a href="#skills" class="block text-white py-2">Kỹ năng</a>
-        <a href="#contact" class="block text-white py-2">Liên hệ</a>
+      <div id="mobile-menu" class="hidden md:hidden bg-brand-red bg-opacity-90">
+        <a href="#about" class="block text-white text-center py-2"
+          >Giới thiệu</a
+        >
+        <a href="#education" class="block text-white text-center py-2"
+          >Học vấn</a
+        >
+        <a href="#skills" class="block text-white text-center py-2">Kỹ năng</a>
+        <a href="#contact" class="block text-white text-center py-2">Liên hệ</a>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section
       id="hero"
-      class="min-h-screen bg-cover bg-center relative flex flex-col justify-center items-center text-center"
-      style="background-image: url('./img/cover.JPG')"
+      class="min-h-screen bg-brand-red flex flex-col justify-center items-center text-center p-6 relative"
     >
-      <div class="absolute inset-0 bg-black opacity-40"></div>
-      <div class="relative z-10 text-brand-beige">
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+      <div class="relative z-10">
         <h1
-          class="text-6xl md:text-8xl font-anton tracking-widest text-white drop-shadow-lg"
+          class="text-7xl md:text-9xl font-anton text-brand-beige tracking-widest reveal"
         >
           TRẦN VĂN LĨNH
         </h1>
-        <p class="mt-4 text-2xl md:text-3xl text-white font-light">
+        <p
+          class="mt-4 text-2xl md:text-3xl text-brand-beige font-light reveal"
+          style="transition-delay: 200ms"
+        >
           PORTFOLIO 2025
         </p>
-        <div class="mt-8 space-x-4 text-lg text-white">
+        <div
+          class="mt-8 space-x-4 text-brand-beige text-lg reveal"
+          style="transition-delay: 400ms"
+        >
           <span>"Cuộc sống chỉ có một cớ sao phải buồn rầu"</span>
           <span>|</span>
           <span>TÔI YÊU VIỆT NAM</span>
@@ -116,8 +114,8 @@
     <section id="about" class="py-20 lg:py-32">
       <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-5 gap-12 items-center">
-          <div class="lg:col-span-3">
-            <h2 class="text-5xl md:text-6xl font-anton text-[#b91c1c] mb-8">
+          <div class="lg:col-span-3 reveal">
+            <h2 class="text-5xl md:text-7xl font-anton text-brand-red mb-8">
               GIỚI THIỆU
             </h2>
             <div class="space-y-4 text-2xl text-gray-700">
@@ -125,38 +123,42 @@
               <p><strong>Giới tính:</strong> Nam</p>
               <p><strong>Sinh ngày:</strong> 01/01/2003</p>
               <p>
-                <strong>Quê quán:</strong> Xã Định Thành, tỉnh Cà Mau (Bạc Liêu cũ)
+                <strong>Quê quán:</strong> Xã Định Thành, tỉnh Cà Mau (Bạc Liêu
+                cũ)
               </p>
             </div>
             <p
-              class="mt-8 text-2xl italic text-gray-800 border-l-4 border-[#b91c1c] pl-6"
+              class="mt-8 text-2xl leading-relaxed italic text-gray-800 border-l-4 border-brand-red pl-6"
             >
-              "Là một người trẻ thích sống hướng nội nhưng hướng ngoại, nghiêm túc
-              trong công việc, yêu Nước, yêu cái đẹp, điển hình cho một thế hệ
-              'cợt nhả' sống tích cực và đầy khát vọng."
+              "Là một người trẻ thích sống hướng nội nhưng hướng ngoại, nghiêm
+              túc trong công việc, yêu Nước, yêu cái đẹp, điển hình cho một thế
+              hệ 'cợt nhả' sống tích cực và đầy khát vọng."
             </p>
           </div>
-
-          <div class="lg:col-span-2 flex justify-center items-center">
+          <div
+            class="lg:col-span-2 flex justify-center items-center reveal"
+            style="transition-delay: 200ms"
+          >
             <div
               class="relative w-full max-w-sm overflow-hidden rounded-lg shadow-2xl"
             >
+              <!-- Slide container -->
               <div
                 id="imageSlider"
                 class="flex transition-transform duration-700 ease-in-out"
               >
                 <img
-                  src="./img/avata.JPG"
+                  src="img/avata.JPG"
                   alt="Ảnh 1"
                   class="w-full flex-shrink-0 object-cover"
                 />
                 <img
-                  src="./img/avata2.jpg"
+                  src="img/avata2.jpg"
                   alt="Ảnh 2"
                   class="w-full flex-shrink-0 object-cover"
                 />
                 <img
-                  src="./img/avata3.jpg"
+                  src="img/avata3.jpg"
                   alt="Ảnh 3"
                   class="w-full flex-shrink-0 object-cover"
                 />
@@ -167,18 +169,28 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="bg-[#b91c1c] text-[#fffbeb] py-24 px-10 lg:px-32">
+    <!--Education Section-->
+    <section
+      id="education"
+      class="bg-brand-red text-brand-beige py-24 px-10 lg:px-32"
+    >
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-center text-6xl md:text-7xl font-anton mb-12">
+        <h2
+          class="text-center text-6xl md:text-7xl font-anton mb-12 tracking-wide"
+        >
           HỌC VẤN
         </h2>
 
-        <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-start gap-12"
+        >
+          <!-- Cột trái -->
           <div
-            class="flex-1 bg-white/10 backdrop-blur-sm p-10 rounded-2xl shadow-lg"
+            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-500"
           >
-            <h3 class="text-3xl font-bold mb-6 border-b border-[#fffbeb]/50 pb-2">
+            <h3
+              class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2"
+            >
               Thông tin chung
             </h3>
             <p class="text-2xl leading-relaxed">
@@ -191,45 +203,177 @@
               <strong>Chuyên ngành:</strong> Công nghệ Vật lý điện tử và tin học
             </p>
             <p class="text-2xl leading-relaxed"><strong>Khóa:</strong> 2022</p>
-            <p class="text-2xl leading-relaxed"><strong>GPA:</strong> 3.5 / 4.0</p>
+            <p class="text-2xl leading-relaxed">
+              <strong>GPA:</strong> 3.5 / 4.0
+            </p>
+
+            <h3
+              class="text-3xl font-bold mt-10 mb-4 border-b border-brand-beige pb-2"
+            >
+              Kỹ năng & Sở thích
+            </h3>
+            <ul class="text-2xl space-y-2 leading-relaxed list-disc pl-6">
+              <li>Tư duy phản biện</li>
+              <li>Tư duy hệ thống và tư duy thiết kế</li>
+              <li>Đam mê công nghệ, điện tử</li>
+              <li>Kỹ năng tự học</li>
+              <li>Thích tìm hiểu tâm lý học, triết học, giáo dục, tôn giáo</li>
+            </ul>
           </div>
 
+          <!-- Cột phải -->
           <div
-            class="flex-1 bg-white/10 backdrop-blur-sm p-10 rounded-2xl shadow-lg"
+            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-500"
           >
-            <h3 class="text-3xl font-bold mb-6 border-b border-[#fffbeb]/50 pb-2">
+            <h3
+              class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2"
+            >
+              Điểm các môn tiêu biểu
+            </h3>
+            <table class="w-full text-2xl mb-8">
+              <tbody>
+                <tr class="border-b border-white/30">
+                  <td class="py-2">Kỹ thuật lập trình C</td>
+                  <td class="font-semibold text-right">4/4</td>
+                </tr>
+                <tr class="border-b border-white/30">
+                  <td class="py-2">Lập trình hướng đối tương</td>
+                  <td class="font-semibold text-right">3.5/4</td>
+                </tr>
+                <tr class="border-b border-white/30">
+                  <td class="py-2">Lập trình python</td>
+                  <td class="font-semibold text-right">3/4</td>
+                </tr>
+                <tr class="border-b border-white/30">
+                  <td class="py-2">Xử lý tín hiệu số</td>
+                  <td class="font-semibold text-right">3.5/4</td>
+                </tr>
+                <tr>
+                  <td class="py-2">Điện tử cơ bản</td>
+                  <td class="font-semibold text-right">3.5/4</td>
+                </tr>
+                <tr>
+                  <td class="py-2">Cơ sở linh kiện bán dẫn</td>
+                  <td class="font-semibold text-right">4/4</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3
+              class="text-3xl font-bold mb-4 border-b border-brand-beige pb-2"
+            >
               Đồ án tiêu biểu
             </h3>
-            <ul class="text-2xl list-disc pl-6 space-y-3">
-              <li>🧠 Hệ thống nhận diện ngôn ngữ ký hiệu tay (VGG16 + Webcam)</li>
-              <li>🌊 Hệ thống IoT giám sát nước RO (ESP32 + Web Dashboard)</li>
-              <li>💲 Phân tích FDI Việt Nam 2015 - 2022 (Data Analysis)</li>
-              <li>🎦 Nhận diện biển số xe (VGG16)</li>
+            <ul class="text-2xl space-y-3 leading-relaxed list-disc pl-6">
+              <li>
+                🧠 Hệ thống nhận diện ngôn ngữ ký hiệu tay bằng học sâu (VGG16 +
+                Webcam)
+              </li>
+              <li>
+                🌊 Hệ thống IoT giám sát chất lượng nước RO (ESP32 + Web
+                Dashboard)
+              </li>
+              <li>
+                💲Phân tích FDI của Việt Nam trong năm 2015 - 2022 (Data
+                Analysis with Python)
+              </li>
+              <li>🎦Hệ thống nhận diện biển số xe (VGG16)</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="py-20 bg-gray-800 text-white text-center">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 lg:py-32">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl md:text-6xl font-anton">THANK YOU!</h2>
-        <p class="mt-4 text-lg text-gray-300">Liên hệ với tôi</p>
-        <div
-          class="mt-8 flex flex-col md:flex-row justify-center items-center gap-6"
+        <h2
+          class="text-5xl md:text-7xl font-anton text-brand-red text-center mb-16 reveal"
         >
-          <a href="mailto:tranlinh151103@gmail.com">📧 tranlinh151103@gmail.com</a>
-          <a href="tel:+84911215034">📞 (+84) 911 215 034</a>
+          KINH NGHIỆM & KỸ NĂNG
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="skill-card reveal">
+            <h3>Vượt khó & Thích nghi</h3>
+            <p>
+              Dễ dàng thích nghi với môi trường mới, không bỏ cuộc trước thử
+              thách từ nhiều công việc và vai trò khác nhau.
+            </p>
+          </div>
+          <div class="skill-card reveal" style="transition-delay: 100ms">
+            <h3>Leadership & Quản lý</h3>
+            <p>
+              Phân công, theo dõi, bao quát dự án và hỗ trợ thành viên. Thành
+              thạo công cụ văn phòng để quản lý.
+            </p>
+          </div>
+          <div class="skill-card reveal" style="transition-delay: 200ms">
+            <h3>Thiết kế & Truyền thông</h3>
+            <p>
+              Sử dụng Canva, AI, Capcut. Có tư duy thiết kế, quy chuẩn truyền
+              thông và sáng tạo nội dung.
+            </p>
+          </div>
+          <div class="skill-card reveal" style="transition-delay: 300ms">
+            <h3>Kỹ năng mềm khác</h3>
+            <p>
+              Sử dụng AI hiệu quả (ChatGPT, Gemini). Quản lý thời gian, cảm xúc,
+              tự học và lắng nghe có chọn lọc.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ô "Những câu chuyện của tôi" -->
+      <div class="mt-16 flex justify-center">
+        <div
+          class="max-w-3xl bg-white text-gray-800 rounded-2xl shadow-2xl p-8 transform transition duration-700"
+          id="story-box"
+        >
+          <h3 class="text-4xl font-bold text-center text-brand-red mb-6">
+            CHUYỆN VỤN VẶT CỦA TÔI
+          </h3>
+
+          <div
+            id="story-box"
+            class="max-w-3xl mx-auto p-8 rounded-3xl shadow-xl bg-white/80 backdrop-blur-md text-center transition-all duration-700 ease-in-out"
+          >
+            <div
+              id="story-content"
+              class="text-2xl text-gray-800 space-y-4"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="py-20 bg-gray-800 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-6xl font-anton reveal">THANK YOU!</h2>
+        <p
+          class="mt-4 text-lg text-gray-300 reveal"
+          style="transition-delay: 150ms"
+        >
+          Liên hệ với tôi.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row justify-center items-center gap-6 reveal"
+          style="transition-delay: 300ms"
+        >
+          <a href="mailto:tranlinh151103@gmail.com" class="contact-link">
+            📧 tranlinh151103@gmail.com
+          </a>
+          <a href="tel:+84911215034" class="contact-link">
+            📞 (+84) 911 215 034
+          </a>
         </div>
         <p class="mt-12 text-xl text-gray-500">
-          &copy; 2025 Trần Văn Lĩnh. Có sử dụng AI (nhưng sáng tạo là của tớ ☺️)
+          &copy; 2025 Trần Văn Lĩnh. Có sử dụng AI (nhưng sáng tạo là của tớ☺️)
         </p>
       </div>
     </footer>
 
-    <!-- Script -->
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
-

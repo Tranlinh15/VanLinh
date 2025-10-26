@@ -12,8 +12,65 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- 🌿 Tinh chỉnh hiển thị tổng thể -->
+    <style>
+      body {
+        zoom: 0.85; /* Thu nhỏ toàn trang cho vừa mắt */
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+
+      h1, h2, h3 {
+        line-height: 1.1;
+      }
+
+      /* Giảm khoảng cách các ô kỹ năng */
+      .skill-card {
+        background-color: #fff5f5;
+        border: 1px solid #b91c1c20;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .context-nav-bar {
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      .context-nav-bar:hover {
+        color: #fffbeb;
+      }
+
+      #hero {
+        background: url("img/cover.jpg") no-repeat center center/cover fixed;
+      }
+
+      .contact-link {
+        font-size: 18px;
+        color: #fff;
+        transition: color 0.3s;
+      }
+
+      .contact-link:hover {
+        color: #ffcccb;
+      }
+    </style>
   </head>
-  <body class="overflow-x-hidden">
+
+  <body>
     <!-- Header and Navigation -->
     <header
       id="header"
@@ -28,7 +85,7 @@
         <div class="hidden md:flex space-x-8">
           <a href="#about" class="context-nav-bar"><b>Giới thiệu</b></a>
           <a href="#education" class="context-nav-bar"><b>Học vấn</b></a>
-          <a href="#skills" class="context-nav-bar"><b>Trãi nghiệm</b></a>
+          <a href="#skills" class="context-nav-bar"><b>Trải nghiệm</b></a>
           <a href="#contact" class="context-nav-bar"><b>Liên hệ</b></a>
         </div>
         <button
@@ -51,14 +108,11 @@
           </svg>
         </button>
       </nav>
+
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-brand-red bg-opacity-90">
-        <a href="#about" class="block text-white text-center py-2"
-          >Giới thiệu</a
-        >
-        <a href="#education" class="block text-white text-center py-2"
-          >Học vấn</a
-        >
+        <a href="#about" class="block text-white text-center py-2">Giới thiệu</a>
+        <a href="#education" class="block text-white text-center py-2">Học vấn</a>
         <a href="#skills" class="block text-white text-center py-2">Kỹ năng</a>
         <a href="#contact" class="block text-white text-center py-2">Liên hệ</a>
       </div>
@@ -67,19 +121,16 @@
     <!-- Hero Section -->
     <section
       id="hero"
-      class="min-h-screen bg-brand-red flex flex-col justify-center items-center text-center p-6 relative"
+      class="min-h-screen flex flex-col justify-center items-center text-center p-6 relative"
     >
       <div class="absolute inset-0 bg-black opacity-20"></div>
       <div class="relative z-10">
         <h1
-          class="text-7xl md:text-9xl font-anton text-brand-beige tracking-widest reveal"
+          class="text-6xl md:text-8xl font-anton text-brand-beige tracking-widest reveal"
         >
           TRẦN VĂN LĨNH
         </h1>
-        <p
-          class="mt-4 text-2xl md:text-3xl text-brand-beige font-light reveal"
-          style="transition-delay: 200ms"
-        >
+        <p class="mt-4 text-2xl md:text-3xl text-brand-beige font-light reveal">
           PORTFOLIO 2025
         </p>
         <div
@@ -115,23 +166,20 @@
       <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-5 gap-12 items-center">
           <div class="lg:col-span-3 reveal">
-            <h2 class="text-5xl md:text-7xl font-anton text-brand-red mb-8">
+            <h2 class="text-5xl md:text-6xl font-anton text-brand-red mb-8">
               GIỚI THIỆU
             </h2>
-            <div class="space-y-4 text-2xl text-gray-700">
+            <div class="space-y-4 text-xl text-gray-700">
               <p><strong>Họ và tên:</strong> Trần Văn Lĩnh</p>
               <p><strong>Giới tính:</strong> Nam</p>
               <p><strong>Sinh ngày:</strong> 01/01/2003</p>
-              <p>
-                <strong>Quê quán:</strong> Xã Định Thành, tỉnh Cà Mau (Bạc Liêu
-                cũ)
-              </p>
+              <p><strong>Quê quán:</strong> Định Thành, Cà Mau (Bạc Liêu cũ)</p>
             </div>
             <p
-              class="mt-8 text-2xl leading-relaxed italic text-gray-800 border-l-4 border-brand-red pl-6"
+              class="mt-6 text-xl leading-relaxed italic text-gray-800 border-l-4 border-brand-red pl-6"
             >
               "Là một người trẻ thích sống hướng nội nhưng hướng ngoại, nghiêm
-              túc trong công việc, yêu Nước, yêu cái đẹp, điển hình cho một thế
+              túc trong công việc, yêu nước, yêu cái đẹp, điển hình cho một thế
               hệ 'cợt nhả' sống tích cực và đầy khát vọng."
             </p>
           </div>
@@ -142,26 +190,13 @@
             <div
               class="relative w-full max-w-sm overflow-hidden rounded-lg shadow-2xl"
             >
-              <!-- Slide container -->
               <div
                 id="imageSlider"
                 class="flex transition-transform duration-700 ease-in-out"
               >
-                <img
-                  src="img/avata.JPG"
-                  alt="Ảnh 1"
-                  class="w-full flex-shrink-0 object-cover"
-                />
-                <img
-                  src="img/avata2.jpg"
-                  alt="Ảnh 2"
-                  class="w-full flex-shrink-0 object-cover"
-                />
-                <img
-                  src="img/avata3.jpg"
-                  alt="Ảnh 3"
-                  class="w-full flex-shrink-0 object-cover"
-                />
+                <img src="img/avata.JPG" alt="Ảnh 1" class="w-full object-cover" />
+                <img src="img/avata2.jpg" alt="Ảnh 2" class="w-full object-cover" />
+                <img src="img/avata3.jpg" alt="Ảnh 3" class="w-full object-cover" />
               </div>
             </div>
           </div>
@@ -169,10 +204,10 @@
       </div>
     </section>
 
-    <!--Education Section-->
+    <!-- Education Section -->
     <section
       id="education"
-      class="bg-brand-red text-brand-beige py-24 px-10 lg:px-32"
+      class="bg-brand-red text-brand-beige py-20 px-10 lg:px-32"
     >
       <div class="max-w-7xl mx-auto">
         <h2
@@ -184,100 +219,49 @@
         <div
           class="flex flex-col lg:flex-row justify-between items-start gap-12"
         >
-          <!-- Cột trái -->
           <div
-            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-500"
+            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg"
           >
-            <h3
-              class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2"
-            >
+            <h3 class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2">
               Thông tin chung
             </h3>
-            <p class="text-2xl leading-relaxed">
+            <p class="text-xl leading-relaxed">
               <strong>Trường:</strong> Đại học Khoa học Tự nhiên, ĐHQG-HCM
             </p>
-            <p class="text-2xl leading-relaxed">
+            <p class="text-xl leading-relaxed">
               <strong>Khoa:</strong> Vật lý - Vật lý kỹ thuật
             </p>
-            <p class="text-2xl leading-relaxed">
+            <p class="text-xl leading-relaxed">
               <strong>Chuyên ngành:</strong> Công nghệ Vật lý điện tử và tin học
             </p>
-            <p class="text-2xl leading-relaxed"><strong>Khóa:</strong> 2022</p>
-            <p class="text-2xl leading-relaxed">
-              <strong>GPA:</strong> 3.5 / 4.0
-            </p>
+            <p class="text-xl leading-relaxed"><strong>Khóa:</strong> 2022</p>
+            <p class="text-xl leading-relaxed"><strong>GPA:</strong> 3.5 / 4.0</p>
 
             <h3
               class="text-3xl font-bold mt-10 mb-4 border-b border-brand-beige pb-2"
             >
               Kỹ năng & Sở thích
             </h3>
-            <ul class="text-2xl space-y-2 leading-relaxed list-disc pl-6">
+            <ul class="text-xl space-y-2 leading-relaxed list-disc pl-6">
               <li>Tư duy phản biện</li>
-              <li>Tư duy hệ thống và tư duy thiết kế</li>
+              <li>Tư duy hệ thống & thiết kế</li>
               <li>Đam mê công nghệ, điện tử</li>
               <li>Kỹ năng tự học</li>
-              <li>Thích tìm hiểu tâm lý học, triết học, giáo dục, tôn giáo</li>
+              <li>Quan tâm tâm lý, triết học, giáo dục</li>
             </ul>
           </div>
 
-          <!-- Cột phải -->
           <div
-            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-500"
+            class="flex-1 bg-[#a4161a]/40 backdrop-blur-sm p-10 rounded-2xl shadow-lg"
           >
-            <h3
-              class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2"
-            >
-              Điểm các môn tiêu biểu
+            <h3 class="text-3xl font-bold mb-6 border-b border-brand-beige pb-2">
+              Đồ án & Môn học tiêu biểu
             </h3>
-            <table class="w-full text-2xl mb-8">
-              <tbody>
-                <tr class="border-b border-white/30">
-                  <td class="py-2">Kỹ thuật lập trình C</td>
-                  <td class="font-semibold text-right">4/4</td>
-                </tr>
-                <tr class="border-b border-white/30">
-                  <td class="py-2">Lập trình hướng đối tương</td>
-                  <td class="font-semibold text-right">3.5/4</td>
-                </tr>
-                <tr class="border-b border-white/30">
-                  <td class="py-2">Lập trình python</td>
-                  <td class="font-semibold text-right">3/4</td>
-                </tr>
-                <tr class="border-b border-white/30">
-                  <td class="py-2">Xử lý tín hiệu số</td>
-                  <td class="font-semibold text-right">3.5/4</td>
-                </tr>
-                <tr>
-                  <td class="py-2">Điện tử cơ bản</td>
-                  <td class="font-semibold text-right">3.5/4</td>
-                </tr>
-                <tr>
-                  <td class="py-2">Cơ sở linh kiện bán dẫn</td>
-                  <td class="font-semibold text-right">4/4</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h3
-              class="text-3xl font-bold mb-4 border-b border-brand-beige pb-2"
-            >
-              Đồ án tiêu biểu
-            </h3>
-            <ul class="text-2xl space-y-3 leading-relaxed list-disc pl-6">
-              <li>
-                🧠 Hệ thống nhận diện ngôn ngữ ký hiệu tay bằng học sâu (VGG16 +
-                Webcam)
-              </li>
-              <li>
-                🌊 Hệ thống IoT giám sát chất lượng nước RO (ESP32 + Web
-                Dashboard)
-              </li>
-              <li>
-                💲Phân tích FDI của Việt Nam trong năm 2015 - 2022 (Data
-                Analysis with Python)
-              </li>
-              <li>🎦Hệ thống nhận diện biển số xe (VGG16)</li>
+            <ul class="text-xl space-y-3 leading-relaxed list-disc pl-6">
+              <li>🧠 Nhận diện ký hiệu tay (VGG16 + Webcam)</li>
+              <li>🌊 IoT giám sát nước RO (ESP32 + Web Dashboard)</li>
+              <li>💲 Phân tích FDI Việt Nam (Python Data Analysis)</li>
+              <li>🎦 Nhận diện biển số xe (VGG16)</li>
             </ul>
           </div>
         </div>
@@ -323,28 +307,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Ô "Những câu chuyện của tôi" -->
-      <div class="mt-16 flex justify-center">
-        <div
-          class="max-w-3xl bg-white text-gray-800 rounded-2xl shadow-2xl p-8 transform transition duration-700"
-          id="story-box"
-        >
-          <h3 class="text-4xl font-bold text-center text-brand-red mb-6">
-            CHUYỆN VỤN VẶT CỦA TÔI
-          </h3>
-
-          <div
-            id="story-box"
-            class="max-w-3xl mx-auto p-8 rounded-3xl shadow-xl bg-white/80 backdrop-blur-md text-center transition-all duration-700 ease-in-out"
-          >
-            <div
-              id="story-content"
-              class="text-2xl text-gray-800 space-y-4"
-            ></div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Contact Section -->
@@ -377,4 +339,3 @@
     <script src="main.js"></script>
   </body>
 </html>
-
